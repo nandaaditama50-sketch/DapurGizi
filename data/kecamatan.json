@@ -1,0 +1,37 @@
+[
+  {
+    "id": "banjarnegara",
+    "nama": "Banjarnegara (Kota)",
+    "bahanDominan": ["tempe", "tahu", "bayam", "kangkung", "telur", "wortel", "jagung"]
+  },
+  {
+    "id": "purwonegoro",
+    "nama": "Purwonegoro",
+    "bahanDominan": ["tempe", "bayam", "kacang panjang", "ikan mujair", "singkong", "jagung"]
+  },
+  {
+    "id": "bawang",
+    "nama": "Bawang",
+    "bahanDominan": ["bayam", "kacang hijau", "labu siam", "ubi jalar", "daun kelor", "tempe"]
+  },
+  {
+    "id": "madukara",
+    "nama": "Madukara",
+    "bahanDominan": ["ubi jalar", "singkong", "bayam", "jagung", "telur", "ikan mujair"]
+  },
+  {
+    "id": "sigaluh",
+    "nama": "Sigaluh",
+    "bahanDominan": ["daun kelor", "singkong", "kacang hijau", "tempe", "ubi jalar"]
+  },
+  {
+    "id": "mandiraja",
+    "nama": "Mandiraja",
+    "bahanDominan": ["ikan mujair", "tempe", "tahu", "kacang panjang", "bayam", "singkong"]
+  },
+  {
+    "id": "pagedongan",
+    "nama": "Pagedongan",
+    "bahanDominan": ["singkong", "ubi jalar", "daun kelor", "jagung", "kacang tanah"]
+  }
+]

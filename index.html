@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DapurGizi Nusantara — Cegah Stunting dengan Pangan Lokal Banjarnegara</title>
+  <meta name="description" content="Platform rekomendasi resep padat gizi dari bahan pangan lokal Banjarnegara. Cari menu sehat sesuai budget keluarga dan cek risiko stunting anak Anda.">
+  <meta name="keywords" content="DapurGizi, stunting, gizi anak, resep sehat, pangan lokal, Banjarnegara, kalkulator budget">
+  <meta name="author" content="DapurGizi Nusantara">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="DapurGizi Nusantara — Cegah Stunting dengan Pangan Lokal">
+  <meta property="og:description" content="Rekomendasi resep padat gizi dari bahan lokal Banjarnegara sesuai budget keluarga Anda.">
+  <meta property="og:type" content="website">
+
+  <!-- Favicon -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>🌿</text></svg>">
+
+  <!-- Stylesheets -->
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+
+  <!-- ===== Header / Navbar ===== -->
+  <header class="header" id="header">
+    <div class="header__inner">
+      <a href="#" class="header__logo" id="logo">
+        <span class="header__logo-icon">🌿</span>
+        DapurGizi
+      </a>
+
+      <nav class="header__nav" id="nav">
+        <ul class="header__nav-list">
+          <li><a href="#hero" class="header__nav-link header__nav-link--active" id="nav-home">Beranda</a></li>
+          <li><a href="#features" class="header__nav-link" id="nav-features">Fitur</a></li>
+          <li><a href="#recipes" class="header__nav-link" id="nav-recipes">Resep</a></li>
+          <li><a href="#budget" class="header__nav-link" id="nav-budget">Kalkulator</a></li>
+          <li><a href="#screening" class="header__nav-link" id="nav-screening">Cek Stunting</a></li>
+        </ul>
+        <a href="#screening" class="header__cta" id="nav-cta">Cek Risiko Stunting →</a>
+      </nav>
+
+      <button class="header__menu-toggle" id="menu-toggle" aria-label="Toggle Navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- ===== Hero Section ===== -->
+  <section class="hero" id="hero">
+    <div class="hero__bg">
+      <img src="assets/images/hero-bg.jpg" alt="Bahan pangan lokal Banjarnegara" loading="eager">
+    </div>
+
+    <!-- Decorative Elements -->
+    <div class="hero__decor hero__decor--1"></div>
+    <div class="hero__decor hero__decor--2"></div>
+
+    <div class="hero__content">
+      <div class="hero__text">
+        <div class="hero__badge">
+          🌾 Fokus Wilayah Banjarnegara
+        </div>
+        <h1 class="hero__title">
+          Cegah Stunting dengan <span>Pangan Lokal</span> Banjarnegara
+        </h1>
+        <p class="hero__description">
+          Temukan resep bergizi tinggi dari bahan pangan lokal yang terjangkau. 
+          Masukkan budget dapur Anda, dan kami carikan menu terbaik untuk keluarga.
+        </p>
+        <div class="hero__actions">
+          <a href="#recipes" class="btn btn--accent btn--lg" id="hero-cta-recipes">
+            🍽️ Cari Resep Sesuai Budget
+          </a>
+          <a href="#screening" class="btn btn--outline btn--lg" id="hero-cta-screening">
+            📊 Cek Tumbuh Kembang Anak
+          </a>
+        </div>
+      </div>
+
+      <div class="hero__stats">
+        <div class="hero__stat-card">
+          <div class="hero__stat-icon">🥗</div>
+          <div class="hero__stat-number">12+</div>
+          <div class="hero__stat-label">Resep Padat Gizi</div>
+        </div>
+        <div class="hero__stat-card">
+          <div class="hero__stat-icon">💰</div>
+          <div class="hero__stat-number">Rp 5rb</div>
+          <div class="hero__stat-label">Mulai Dari</div>
+        </div>
+        <div class="hero__stat-card">
+          <div class="hero__stat-icon">📍</div>
+          <div class="hero__stat-number">7</div>
+          <div class="hero__stat-label">Kecamatan</div>
+        </div>
+        <div class="hero__stat-card">
+          <div class="hero__stat-icon">👶</div>
+          <div class="hero__stat-number">100%</div>
+          <div class="hero__stat-label">Gratis Digunakan</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Features Section ===== -->
+  <section class="features" id="features">
+    <div class="container">
+      <div class="features__header reveal">
+        <div class="badge badge--primary">✨ Fitur Utama</div>
+        <h2 class="section-title">Solusi Gizi Keluarga<br>dalam Genggaman</h2>
+        <p class="section-subtitle">Tiga fitur utama yang dirancang khusus untuk membantu keluarga Indonesia mengoptimalkan pemenuhan gizi harian dengan bahan lokal.</p>
+      </div>
+
+      <div class="features__grid">
+        <!-- Feature 1 -->
+        <div class="feature-card reveal" id="feature-filter">
+          <div class="feature-card__icon feature-card__icon--green">📍</div>
+          <h3 class="feature-card__title">Filter Pangan Lokal</h3>
+          <p class="feature-card__desc">Pilih kecamatan Anda dan temukan bahan pangan yang sedang musim atau melimpah di daerah tersebut. Singkong, tempe, daun kelor — semua ada!</p>
+          <a href="#recipes" class="feature-card__link">Jelajahi Resep →</a>
+        </div>
+
+        <!-- Feature 2 -->
+        <div class="feature-card reveal" id="feature-budget">
+          <div class="feature-card__icon feature-card__icon--orange">💰</div>
+          <h3 class="feature-card__title">Kalkulator Budget Dapur</h3>
+          <p class="feature-card__desc">Masukkan anggaran harian Anda (misal Rp 20.000), kami rekomendasikan menu sarapan hingga makan malam yang sesuai budget.</p>
+          <a href="#budget" class="feature-card__link">Hitung Sekarang →</a>
+        </div>
+
+        <!-- Feature 3 -->
+        <div class="feature-card reveal" id="feature-screening">
+          <div class="feature-card__icon feature-card__icon--blue">📊</div>
+          <h3 class="feature-card__title">Skrining Risiko Stunting</h3>
+          <p class="feature-card__desc">Masukkan data anak (umur, berat, tinggi badan) untuk mendapatkan hasil skrining awal dan rekomendasi gizi sesuai WHO/Kemenkes.</p>
+          <a href="#screening" class="feature-card__link">Cek Sekarang →</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Recipes Section ===== -->
+  <section class="recipes" id="recipes">
+    <div class="container">
+      <div class="recipes__header reveal">
+        <div class="badge badge--accent">🍳 Resep Pilihan</div>
+        <h2 class="section-title">Resep Padat Gizi<br>dari Bahan Lokal</h2>
+        <p class="section-subtitle">Resep yang dikurasi khusus menggunakan bahan pangan lokal Banjarnegara dengan harga terjangkau.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="recipes__filters reveal" id="recipe-filters">
+        <div class="filter-group">
+          <label class="filter-group__label" for="filter-kecamatan">📍 Pilih Kecamatan</label>
+          <select class="filter-group__select" id="filter-kecamatan">
+            <option value="">Semua Kecamatan</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-group__label" for="filter-kategori">🍽️ Kategori</label>
+          <select class="filter-group__select" id="filter-kategori">
+            <option value="">Semua Kategori</option>
+            <option value="Sarapan">Sarapan</option>
+            <option value="Makan Siang">Makan Siang</option>
+            <option value="Makan Malam">Makan Malam</option>
+            <option value="Lauk">Lauk</option>
+            <option value="Camilan">Camilan</option>
+          </select>
+        </div>
+        <div class="filter-group">
+          <label class="filter-group__label" for="filter-budget">💰 Budget Maksimal</label>
+          <div class="filter-group__input-wrapper">
+            <span class="filter-group__input-prefix">Rp</span>
+            <input type="number" class="filter-group__input filter-group__input--with-prefix" id="filter-budget" placeholder="cth: 15000" min="0" step="1000">
+          </div>
+        </div>
+        <button class="btn btn--primary recipes__search-btn" id="btn-filter-recipes">🔍 Cari Resep</button>
+      </div>
+
+      <!-- Recipe Grid -->
+      <div class="recipes__grid" id="recipes-grid">
+        <!-- Cards will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Budget Calculator Section ===== -->
+  <section class="budget" id="budget">
+    <div class="container">
+      <div class="budget__inner">
+        <div class="budget__text reveal">
+          <div class="badge badge--accent">💰 Kalkulator Anggaran</div>
+          <h2 class="section-title">Masak Bergizi dengan Budget Terbatas</h2>
+          <p class="section-subtitle">Masukkan anggaran harian dapur Anda, kami akan merekomendasikan kombinasi menu dari bahan lokal yang sesuai budget.</p>
+
+          <ul class="screening__info-list" style="margin-top: 2rem;">
+            <li class="screening__info-item">
+              <div class="screening__info-icon" style="background: rgba(255,255,255,0.1);">💡</div>
+              <div class="screening__info-text">
+                <h4 style="color: white;">Budget Hemat</h4>
+                <p style="color: rgba(255,255,255,0.5);">Mulai dari Rp 5.000 per hari sudah bisa menyiapkan menu bergizi dari bahan lokal.</p>
+              </div>
+            </li>
+            <li class="screening__info-item">
+              <div class="screening__info-icon" style="background: rgba(255,255,255,0.1);">🌿</div>
+              <div class="screening__info-text">
+                <h4 style="color: white;">Bahan Lokal</h4>
+                <p style="color: rgba(255,255,255,0.5);">Semua resep menggunakan bahan yang mudah ditemukan di pasar tradisional Banjarnegara.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="budget__form reveal" id="budget-form-card">
+          <h3 class="budget__form-title">🧮 Hitung Menu Harian</h3>
+
+          <div class="budget__form-group">
+            <label class="budget__form-label" for="budget-kecamatan">Pilih Kecamatan</label>
+            <select class="budget__form-select" id="budget-kecamatan">
+              <option value="">Pilih Lokasi Anda</option>
+            </select>
+          </div>
+
+          <div class="budget__form-group">
+            <label class="budget__form-label" for="budget-amount">Anggaran Harian (Rp)</label>
+            <div class="budget__form-input-wrapper">
+              <span class="budget__form-input-prefix">Rp</span>
+              <input type="number" class="budget__form-input budget__form-input--prefixed" id="budget-amount" placeholder="cth: 20000" min="5000" step="1000">
+            </div>
+          </div>
+
+          <button class="btn btn--accent btn--lg budget__form-submit" id="btn-calc-budget">
+            ✨ Cari Menu Sesuai Budget
+          </button>
+
+          <!-- Results -->
+          <div class="budget__results" id="budget-results">
+            <div id="budget-results-list"></div>
+            <div class="budget__total" id="budget-total"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Stunting Screening Section ===== -->
+  <section class="screening" id="screening">
+    <div class="container">
+      <div class="screening__inner">
+        <div class="screening__info reveal">
+          <div class="badge badge--primary">📊 Skrining Mandiri</div>
+          <h2 class="section-title">Cek Risiko Stunting Anak Anda</h2>
+          <p class="section-subtitle">Deteksi dini adalah kunci pencegahan stunting. Masukkan data anak Anda untuk mendapatkan hasil skrining awal berdasarkan standar WHO/Kemenkes.</p>
+
+          <ul class="screening__info-list">
+            <li class="screening__info-item">
+              <div class="screening__info-icon">📏</div>
+              <div class="screening__info-text">
+                <h4>Pengukuran Sederhana</h4>
+                <p>Cukup masukkan umur, berat badan, dan tinggi badan anak. Tidak perlu data medis lain.</p>
+              </div>
+            </li>
+            <li class="screening__info-item">
+              <div class="screening__info-icon">🏥</div>
+              <div class="screening__info-text">
+                <h4>Standar WHO & Kemenkes</h4>
+                <p>Perhitungan mengacu pada standar antropometri resmi untuk anak usia 0-60 bulan.</p>
+              </div>
+            </li>
+            <li class="screening__info-item">
+              <div class="screening__info-icon">🍽️</div>
+              <div class="screening__info-text">
+                <h4>Rekomendasi Gizi</h4>
+                <p>Hasil skrining disertai rekomendasi menu padat gizi dari bahan lokal Banjarnegara.</p>
+              </div>
+            </li>
+            <li class="screening__info-item">
+              <div class="screening__info-icon">🔒</div>
+              <div class="screening__info-text">
+                <h4>Data Privasi Aman</h4>
+                <p>Data tidak disimpan di server. Semua perhitungan dilakukan langsung di perangkat Anda.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <div class="screening__form-card" id="screening-form-card">
+            <h3 class="screening__form-title">📋 Form Skrining Anak</h3>
+            <p class="screening__form-subtitle">Isi data di bawah untuk mengetahui status gizi anak Anda</p>
+
+            <div class="screening__form-group">
+              <label class="screening__form-label" for="screening-gender">Jenis Kelamin Anak</label>
+              <select class="screening__form-select" id="screening-gender">
+                <option value="">Pilih Jenis Kelamin</option>
+                <option value="L">Laki-laki</option>
+                <option value="P">Perempuan</option>
+              </select>
+            </div>
+
+            <div class="screening__form-group">
+              <label class="screening__form-label" for="screening-age">Umur Anak (bulan)</label>
+              <input type="number" class="screening__form-input" id="screening-age" placeholder="cth: 24" min="0" max="60">
+            </div>
+
+            <div class="screening__form-row">
+              <div class="screening__form-group">
+                <label class="screening__form-label" for="screening-weight">Berat Badan (kg)</label>
+                <input type="number" class="screening__form-input" id="screening-weight" placeholder="cth: 10.5" min="0" step="0.1">
+              </div>
+              <div class="screening__form-group">
+                <label class="screening__form-label" for="screening-height">Tinggi Badan (cm)</label>
+                <input type="number" class="screening__form-input" id="screening-height" placeholder="cth: 82" min="0" step="0.1">
+              </div>
+            </div>
+
+            <button class="btn btn--primary btn--lg screening__form-submit" id="btn-check-stunting">
+              🔍 Cek Risiko Stunting
+            </button>
+
+            <p class="screening__form-note">
+              ⚠️ Hasil skrining ini bersifat awal dan bukan diagnosis medis. Untuk pemeriksaan lebih lanjut, konsultasikan dengan tenaga kesehatan.
+            </p>
+
+            <!-- Result -->
+            <div class="screening__result" id="screening-result">
+              <div class="screening__result-header">
+                <span class="screening__result-icon" id="result-icon"></span>
+                <span class="screening__result-status" id="result-status"></span>
+              </div>
+              <div class="screening__result-details" id="result-details"></div>
+              <div class="screening__result-cta" id="result-cta"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer" id="footer">
+    <div class="container">
+      <div class="footer__grid">
+        <div class="footer__brand">
+          <div class="footer__brand-logo">
+            <span>🌿</span> DapurGizi Nusantara
+          </div>
+          <p class="footer__brand-desc">
+            Platform rekomendasi resep padat gizi dari bahan pangan lokal untuk mencegah stunting. Dikembangkan dengan ❤️ untuk keluarga Indonesia.
+          </p>
+        </div>
+
+        <div>
+          <h4 class="footer__col-title">Navigasi</h4>
+          <ul class="footer__links">
+            <li><a href="#hero" class="footer__link">Beranda</a></li>
+            <li><a href="#features" class="footer__link">Fitur</a></li>
+            <li><a href="#recipes" class="footer__link">Resep</a></li>
+            <li><a href="#budget" class="footer__link">Kalkulator</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__col-title">Fitur</h4>
+          <ul class="footer__links">
+            <li><a href="#recipes" class="footer__link">Filter Pangan Lokal</a></li>
+            <li><a href="#budget" class="footer__link">Kalkulator Budget</a></li>
+            <li><a href="#screening" class="footer__link">Skrining Stunting</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="footer__col-title">Referensi</h4>
+          <ul class="footer__links">
+            <li><a href="https://www.who.int/tools/child-growth-standards" class="footer__link" target="_blank">Standar WHO</a></li>
+            <li><a href="https://stunting.go.id" class="footer__link" target="_blank">stunting.go.id</a></li>
+            <li><a href="https://www.kemkes.go.id" class="footer__link" target="_blank">Kemenkes RI</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="footer__bottom">
+        <p class="footer__copyright">© 2026 DapurGizi Nusantara. Dibuat untuk Lomba Inovasi Daerah Banjarnegara.</p>
+        <div class="footer__socials">
+          <a href="#" class="footer__social-link" aria-label="Facebook">📘</a>
+          <a href="#" class="footer__social-link" aria-label="Instagram">📷</a>
+          <a href="#" class="footer__social-link" aria-label="WhatsApp">💬</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ===== Recipe Detail Modal ===== -->
+  <div class="modal-overlay" id="recipe-modal">
+    <div class="modal">
+      <div class="modal__header">
+        <img src="" alt="" id="modal-image">
+        <div class="modal__header-overlay"></div>
+        <button class="modal__close" id="modal-close" aria-label="Close">✕</button>
+        <div class="modal__header-info">
+          <h2 class="modal__title" id="modal-title"></h2>
+          <div class="modal__meta-row" id="modal-meta"></div>
+        </div>
+      </div>
+      <div class="modal__body">
+        <div class="modal__nutrition-grid" id="modal-nutrition"></div>
+        <h3 class="modal__section-title">🥘 Bahan-bahan</h3>
+        <ul class="modal__ingredients" id="modal-ingredients"></ul>
+        <h3 class="modal__section-title">👩‍🍳 Cara Membuat</h3>
+        <ol class="modal__steps" id="modal-steps"></ol>
+      </div>
+    </div>
+  </div>
+
+  <!-- JavaScript -->
+  <script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,431 @@
+[
+  {
+    "id": 1,
+    "nama": "Sayur Bening Bayam & Jagung",
+    "deskripsi": "Sup sayuran bening khas Jawa dengan bayam segar dan jagung manis. Kaya akan zat besi, vitamin A, dan serat.",
+    "kategori": "Makan Siang",
+    "waktuMasak": "20 menit",
+    "porsi": "4 porsi",
+    "estimasiHarga": 8000,
+    "gambar": "assets/images/recipes/sayur-bening.jpg",
+    "bahan": [
+      "2 ikat bayam segar",
+      "1 buah jagung manis, potong",
+      "1 buah labu siam, potong dadu",
+      "3 siung bawang merah",
+      "2 siung bawang putih",
+      "2 lembar daun salam",
+      "Garam & gula secukupnya",
+      "Air 800ml"
+    ],
+    "caraMasak": [
+      "Didihkan air bersama bawang merah, bawang putih yang sudah diiris, dan daun salam.",
+      "Masukkan jagung dan labu siam, masak hingga setengah empuk (~10 menit).",
+      "Tambahkan bayam, aduk rata. Masak 3 menit hingga layu.",
+      "Bumbui dengan garam dan gula secukupnya. Angkat dan sajikan hangat."
+    ],
+    "kandunganGizi": {
+      "kalori": 95,
+      "protein": 4.2,
+      "karbohidrat": 18,
+      "lemak": 1.5,
+      "zatBesi": 3.8,
+      "vitaminA": 520
+    },
+    "bahanLokal": ["bayam", "jagung", "labu siam"],
+    "kecamatan": ["Banjarnegara", "Purwonegoro", "Bawang", "Madukara"]
+  },
+  {
+    "id": 2,
+    "nama": "Tempe Goreng Bumbu Kuning",
+    "deskripsi": "Tempe goreng renyah dengan bumbu kuning kunyit. Sumber protein nabati tinggi yang ekonomis dan mudah dibuat.",
+    "kategori": "Lauk",
+    "waktuMasak": "15 menit",
+    "porsi": "4 porsi",
+    "estimasiHarga": 6000,
+    "gambar": "assets/images/recipes/tempe-goreng.jpg",
+    "bahan": [
+      "1 papan tempe, potong kotak",
+      "3 siung bawang putih, haluskan",
+      "1 sdt kunyit bubuk",
+      "1 sdt ketumbar bubuk",
+      "Garam secukupnya",
+      "Minyak goreng secukupnya"
+    ],
+    "caraMasak": [
+      "Campur bawang putih halus, kunyit, ketumbar, dan garam dengan sedikit air.",
+      "Rendam potongan tempe dalam bumbu selama 10 menit.",
+      "Panaskan minyak goreng dalam wajan.",
+      "Goreng tempe hingga kecokelatan dan renyah. Angkat, tiriskan."
+    ],
+    "kandunganGizi": {
+      "kalori": 160,
+      "protein": 11,
+      "karbohidrat": 8,
+      "lemak": 9,
+      "zatBesi": 2.7,
+      "vitaminA": 15
+    },
+    "bahanLokal": ["tempe"],
+    "kecamatan": ["Banjarnegara", "Purwonegoro", "Sigaluh", "Bawang", "Mandiraja"]
+  },
+  {
+    "id": 3,
+    "nama": "Nasi Pecel Sayuran",
+    "deskripsi": "Nasi dengan aneka sayuran rebus dan sambal pecel kacang. Menu lengkap kaya protein, serat, dan vitamin.",
+    "kategori": "Sarapan",
+    "waktuMasak": "25 menit",
+    "porsi": "3 porsi",
+    "estimasiHarga": 12000,
+    "gambar": "assets/images/recipes/pecel.jpg",
+    "bahan": [
+      "1 ikat bayam",
+      "100g tauge",
+      "100g kacang panjang",
+      "100g kol, iris",
+      "150g kacang tanah, goreng",
+      "3 buah cabai merah",
+      "2 siung bawang putih",
+      "1 sdm gula merah",
+      "Garam & air asam jawa",
+      "Nasi putih"
+    ],
+    "caraMasak": [
+      "Rebus bayam, tauge, kacang panjang, dan kol secara terpisah. Tiriskan.",
+      "Buat sambal pecel: haluskan kacang goreng, cabai, bawang putih, gula merah, garam, dan air asam jawa.",
+      "Tata nasi di piring, susun sayuran di atasnya.",
+      "Siram dengan sambal pecel. Sajikan dengan kerupuk jika ada."
+    ],
+    "kandunganGizi": {
+      "kalori": 320,
+      "protein": 14,
+      "karbohidrat": 42,
+      "lemak": 12,
+      "zatBesi": 5.2,
+      "vitaminA": 380
+    },
+    "bahanLokal": ["bayam", "tauge", "kacang panjang", "kacang tanah"],
+    "kecamatan": ["Banjarnegara", "Purwonegoro", "Bawang", "Madukara", "Mandiraja"]
+  },
+  {
+    "id": 4,
+    "nama": "Bubur Kacang Hijau",
+    "deskripsi": "Bubur kacang hijau hangat dengan santan. Camilan bergizi tinggi untuk pertumbuhan anak, kaya protein dan zat besi.",
+    "kategori": "Camilan",
+    "waktuMasak": "45 menit",
+    "porsi": "5 porsi",
+    "estimasiHarga": 10000,
+    "gambar": "assets/images/recipes/bubur-kacang.jpg",
+    "bahan": [
+      "200g kacang hijau, rendam 2 jam",
+      "100ml santan",
+      "2 lembar daun pandan",
+      "100g gula merah, sisir",
+      "1/2 sdt garam",
+      "800ml air"
+    ],
+    "caraMasak": [
+      "Rebus kacang hijau yang sudah direndam dengan air dan daun pandan hingga empuk (~30 menit).",
+      "Tambahkan gula merah dan garam, aduk hingga gula larut.",
+      "Siapkan santan di mangkuk terpisah.",
+      "Sajikan bubur hangat dengan siraman santan di atasnya."
+    ],
+    "kandunganGizi": {
+      "kalori": 210,
+      "protein": 8,
+      "karbohidrat": 38,
+      "lemak": 4,
+      "zatBesi": 4.5,
+      "vitaminA": 25
+    },
+    "bahanLokal": ["kacang hijau", "gula merah", "santan"],
+    "kecamatan": ["Banjarnegara", "Purwonegoro", "Sigaluh", "Bawang"]
+  },
+  {
+    "id": 5,
+    "nama": "Sayur Lodeh Tahu Tempe",
+    "deskripsi": "Sayur lodeh khas Jawa dengan tahu, tempe, dan labu siam dalam kuah santan gurih. Sumber protein lengkap.",
+    "kategori": "Makan Siang",
+    "waktuMasak": "30 menit",
+    "porsi": "4 porsi",
+    "estimasiHarga": 15000,
+    "gambar": "assets/images/recipes/sayur-lodeh.jpg",
+    "bahan": [
+      "1 buah labu siam, potong",
+      "100g kacang panjang, potong",
+      "1 papan tempe, potong dadu",
+      "1 kotak tahu, potong dadu",
+      "200ml santan",
+      "3 lembar daun salam",
+      "2cm lengkuas, geprek",
+      "5 siung bawang merah",
+      "3 siung bawang putih",
+      "3 buah cabai merah",
+      "1 sdt kunyit bubuk",
+      "Garam & gula secukupnya"
+    ],
+    "caraMasak": [
+      "Haluskan bawang merah, bawang putih, cabai, dan kunyit. Tumis hingga harum.",
+      "Tambahkan air, daun salam, dan lengkuas. Didihkan.",
+      "Masukkan labu siam dan kacang panjang, masak 10 menit.",
+      "Tambahkan tahu dan tempe, masak 5 menit.",
+      "Tuang santan, aduk perlahan. Bumbui garam & gula. Masak 5 menit lagi."
+    ],
+    "kandunganGizi": {
+      "kalori": 245,
+      "protein": 15,
+      "karbohidrat": 20,
+      "lemak": 14,
+      "zatBesi": 4.1,
+      "vitaminA": 180
+    },
+    "bahanLokal": ["labu siam", "kacang panjang", "tempe", "tahu", "santan"],
+    "kecamatan": ["Banjarnegara", "Purwonegoro", "Bawang", "Mandiraja", "Madukara"]
+  },
+  {
+    "id": 6,
+    "nama": "Tumis Daun Kelor & Jagung",
+    "deskripsi": "Tumisan daun kelor dengan jagung manis. Daun kelor superfood lokal sangat kaya nutrisi untuk mencegah stunting.",
+    "kategori": "Lauk",
+    "waktuMasak": "15 menit",
+    "porsi": "3 porsi",
+    "estimasiHarga": 5000,
+    "gambar": "assets/images/recipes/sayur-bening.jpg",
+    "bahan": [
+      "3 ikat daun kelor, petiki",
+      "1 buah jagung manis, pipil",
+      "3 siung bawang merah",
+      "2 siung bawang putih",
+      "1 buah cabai merah",
+      "Garam secukupnya",
+      "Minyak goreng 2 sdm"
+    ],
+    "caraMasak": [
+      "Iris bawang merah, bawang putih, dan cabai.",
+      "Panaskan minyak, tumis bumbu iris hingga harum.",
+      "Masukkan jagung pipil, tambah sedikit air, masak 5 menit.",
+      "Tambahkan daun kelor, aduk rata. Masak 3 menit. Bumbui garam."
+    ],
+    "kandunganGizi": {
+      "kalori": 85,
+      "protein": 6,
+      "karbohidrat": 12,
+      "lemak": 3,
+      "zatBesi": 7.2,
+      "vitaminA": 1890
+    },
+    "bahanLokal": ["daun kelor", "jagung"],
+    "kecamatan": ["Banjarnegara", "Sigaluh", "Pagedongan", "Bawang"]
+  },
+  {
+    "id": 7,
+    "nama": "Nasi Goreng Teri & Kelor",
+    "deskripsi": "Nasi goreng sederhana dengan ikan teri dan daun kelor. Perpaduan kalsium dari teri dan vitamin dari kelor.",
+    "kategori": "Sarapan",
+    "waktuMasak": "15 menit",
+    "porsi": "2 porsi",
+    "estimasiHarga": 10000,
+    "gambar": "assets/images/recipes/tempe-goreng.jpg",
+    "bahan": [
+      "2 piring nasi putih (sisa semalam)",
+      "50g ikan teri medan",
+      "2 ikat daun kelor, petiki",
+      "2 butir telur",
+      "3 siung bawang merah",
+      "2 siung bawang putih",
+      "Kecap manis 2 sdm",
+      "Garam & merica secukupnya",
+      "Minyak goreng 3 sdm"
+    ],
+    "caraMasak": [
+      "Goreng teri hingga kering, sisihkan.",
+      "Tumis bawang merah & putih hingga harum.",
+      "Masukkan telur, orak-arik.",
+      "Tambahkan nasi, aduk rata. Masukkan daun kelor.",
+      "Bumbui kecap, garam, merica. Aduk rata. Taburi teri goreng."
+    ],
+    "kandunganGizi": {
+      "kalori": 380,
+      "protein": 18,
+      "karbohidrat": 48,
+      "lemak": 14,
+      "zatBesi": 6.8,
+      "vitaminA": 950
+    },
+    "bahanLokal": ["daun kelor", "ikan teri", "telur"],
+    "kecamatan": ["Banjarnegara", "Purwonegoro", "Sigaluh", "Madukara"]
+  },
+  {
+    "id": 8,
+    "nama": "Sup Ikan Mujair Kuah Bening",
+    "deskripsi": "Sup ikan mujair segar dengan kuah bening dan sayuran. Kaya protein hewani dan omega-3 untuk perkembangan otak anak.",
+    "kategori": "Makan Malam",
+    "waktuMasak": "25 menit",
+    "porsi": "4 porsi",
+    "estimasiHarga": 18000,
+    "gambar": "assets/images/recipes/sayur-lodeh.jpg",
+    "bahan": [
+      "2 ekor ikan mujair segar, bersihkan",
+      "1 buah tomat, potong",
+      "1 batang serai, geprek",
+      "3 siung bawang merah",
+      "2 siung bawang putih",
+      "2 lembar daun salam",
+      "1 buah jeruk nipis",
+      "Garam & gula secukupnya",
+      "Air 1 liter"
+    ],
+    "caraMasak": [
+      "Lumuri ikan dengan jeruk nipis dan garam, diamkan 10 menit.",
+      "Didihkan air dengan bawang, serai, dan daun salam.",
+      "Masukkan ikan, masak api sedang 10 menit.",
+      "Tambahkan tomat, bumbui garam & gula. Masak 5 menit lagi."
+    ],
+    "kandunganGizi": {
+      "kalori": 165,
+      "protein": 22,
+      "karbohidrat": 5,
+      "lemak": 6,
+      "zatBesi": 2.1,
+      "vitaminA": 95
+    },
+    "bahanLokal": ["ikan mujair", "tomat", "serai"],
+    "kecamatan": ["Banjarnegara", "Purwonegoro", "Bawang", "Madukara", "Mandiraja"]
+  },
+  {
+    "id": 9,
+    "nama": "Singkong Rebus Sambal Kacang",
+    "deskripsi": "Singkong rebus empuk dengan sambal kacang pedas. Camilan tradisional kaya karbohidrat kompleks dan serat.",
+    "kategori": "Camilan",
+    "waktuMasak": "30 menit",
+    "porsi": "4 porsi",
+    "estimasiHarga": 7000,
+    "gambar": "assets/images/recipes/pecel.jpg",
+    "bahan": [
+      "500g singkong, kupas & potong",
+      "100g kacang tanah, goreng",
+      "5 buah cabai rawit",
+      "2 siung bawang putih",
+      "1 sdm gula merah",
+      "Garam secukupnya",
+      "Air asam jawa 1 sdm"
+    ],
+    "caraMasak": [
+      "Rebus singkong dalam air bergaram hingga empuk (~20 menit). Tiriskan.",
+      "Buat sambal: haluskan kacang goreng, cabai, bawang putih, gula merah, garam.",
+      "Tambahkan air asam jawa, aduk rata.",
+      "Sajikan singkong rebus dengan sambal kacang sebagai cocolan."
+    ],
+    "kandunganGizi": {
+      "kalori": 250,
+      "protein": 6,
+      "karbohidrat": 48,
+      "lemak": 5,
+      "zatBesi": 1.8,
+      "vitaminA": 10
+    },
+    "bahanLokal": ["singkong", "kacang tanah"],
+    "kecamatan": ["Banjarnegara", "Pagedongan", "Sigaluh", "Bawang", "Mandiraja"]
+  },
+  {
+    "id": 10,
+    "nama": "Telur Dadar Sayuran",
+    "deskripsi": "Telur dadar tebal berisi wortel dan daun bawang. Sumber protein hewani yang murah dan disukai anak-anak.",
+    "kategori": "Lauk",
+    "waktuMasak": "10 menit",
+    "porsi": "2 porsi",
+    "estimasiHarga": 5000,
+    "gambar": "assets/images/recipes/tempe-goreng.jpg",
+    "bahan": [
+      "3 butir telur",
+      "1 buah wortel, parut halus",
+      "2 batang daun bawang, iris",
+      "Garam & merica secukupnya",
+      "Minyak goreng 2 sdm"
+    ],
+    "caraMasak": [
+      "Kocok telur, tambahkan wortel parut dan daun bawang.",
+      "Bumbui garam dan merica, aduk rata.",
+      "Panaskan minyak dalam wajan, tuang adonan telur.",
+      "Masak api kecil hingga kedua sisi matang kecokelatan."
+    ],
+    "kandunganGizi": {
+      "kalori": 180,
+      "protein": 12,
+      "karbohidrat": 4,
+      "lemak": 14,
+      "zatBesi": 2.5,
+      "vitaminA": 450
+    },
+    "bahanLokal": ["telur", "wortel", "daun bawang"],
+    "kecamatan": ["Banjarnegara", "Purwonegoro", "Sigaluh", "Bawang", "Madukara", "Mandiraja", "Pagedongan"]
+  },
+  {
+    "id": 11,
+    "nama": "Perkedel Tahu Wortel",
+    "deskripsi": "Perkedel tahu campuran wortel yang digoreng renyah. Camilan bergizi seimbang antara protein nabati dan vitamin A.",
+    "kategori": "Camilan",
+    "waktuMasak": "20 menit",
+    "porsi": "3 porsi",
+    "estimasiHarga": 8000,
+    "gambar": "assets/images/recipes/bubur-kacang.jpg",
+    "bahan": [
+      "2 kotak tahu, hancurkan",
+      "1 buah wortel, parut halus",
+      "1 batang daun bawang, iris",
+      "2 siung bawang putih, haluskan",
+      "1 butir telur",
+      "2 sdm tepung terigu",
+      "Garam & merica secukupnya",
+      "Minyak goreng"
+    ],
+    "caraMasak": [
+      "Campurkan tahu hancur, wortel, daun bawang, bawang putih, telur, dan tepung.",
+      "Bumbui garam dan merica. Aduk hingga bisa dibentuk.",
+      "Bentuk bulatan pipih, goreng dalam minyak panas.",
+      "Goreng hingga kedua sisi kecokelatan. Tiriskan."
+    ],
+    "kandunganGizi": {
+      "kalori": 145,
+      "protein": 8,
+      "karbohidrat": 12,
+      "lemak": 8,
+      "zatBesi": 2.2,
+      "vitaminA": 320
+    },
+    "bahanLokal": ["tahu", "wortel"],
+    "kecamatan": ["Banjarnegara", "Purwonegoro", "Bawang", "Mandiraja"]
+  },
+  {
+    "id": 12,
+    "nama": "Ubi Jalar Kukus Madu",
+    "deskripsi": "Ubi jalar kukus dengan siraman madu alami. Camilan sehat untuk anak, kaya beta-karoten dan serat.",
+    "kategori": "Camilan",
+    "waktuMasak": "25 menit",
+    "porsi": "3 porsi",
+    "estimasiHarga": 5000,
+    "gambar": "assets/images/recipes/bubur-kacang.jpg",
+    "bahan": [
+      "3 buah ubi jalar oranye",
+      "2 sdm madu",
+      "1/2 sdt kayu manis bubuk",
+      "Sejumput garam"
+    ],
+    "caraMasak": [
+      "Cuci bersih ubi jalar, potong menjadi beberapa bagian.",
+      "Kukus ubi jalar hingga empuk (~20 menit).",
+      "Tata ubi di piring, siram dengan madu.",
+      "Taburi kayu manis dan sedikit garam. Sajikan hangat."
+    ],
+    "kandunganGizi": {
+      "kalori": 130,
+      "protein": 2,
+      "karbohidrat": 30,
+      "lemak": 0.5,
+      "zatBesi": 0.8,
+      "vitaminA": 1420
+    },
+    "bahanLokal": ["ubi jalar"],
+    "kecamatan": ["Banjarnegara", "Pagedongan", "Sigaluh", "Bawang", "Madukara"]
+  }
+]
