@@ -1,4 +1,13 @@
-/*
-  Legacy aggregate removed to prevent CSS @import chains and render-blocking.
-  The page now loads all CSS files directly in HTML for faster LCP.
-*/
+@import url("./css/base.css");
+@import url("./css/buttons.css");
+@import url("./css/header.css");
+@import url("./css/hero.css");
+@import url("./css/features.css");
+@import url("./css/recipes.css");
+@import url("./css/budget.css");
+@import url("./css/screening.css");
+@import url("./css/modal.css");
+@import url("./css/footer.css");
+@import url("./css/animations.css");
+@import url("./css/extras.css");
+@import url("./css/responsive.css");

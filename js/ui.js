@@ -49,24 +49,32 @@ export function initScrollReveal() {
 export function initActiveNavLink() {
   const sections = document.querySelectorAll('section[id]');
   const navLinks = document.querySelectorAll('.header__nav-link');
+  const header = document.getElementById('header');
+  const navigableSections = [...sections].filter(section =>
+    [...navLinks].some(link => {
+      const href = link.getAttribute('href') || '';
+      return href === `#${section.id}` || href.endsWith(`#${section.id}`);
+    })
+  );
 
-  const observer = new IntersectionObserver((entries) => {
-    entries.forEach(entry => {
-      if (entry.isIntersecting) {
-        const id = entry.target.id;
-        navLinks.forEach(link => {
-          link.classList.remove('header__nav-link--active');
-          const href = link.getAttribute('href') || '';
-          if (href === `#${id}` || href.endsWith(`#${id}`)) {
-            link.classList.add('header__nav-link--active');
-          }
-        });
-      }
+  function updateActiveLink() {
+    const activationPoint = (header ? header.offsetHeight : 0) + 24;
+    let activeSection = navigableSections[0];
+
+    for (const section of navigableSections) {
+      if (section.getBoundingClientRect().top > activationPoint) break;
+      activeSection = section;
+    }
+
+    navLinks.forEach(link => {
+      const href = link.getAttribute('href') || '';
+      const isActive = activeSection &&
+        (href === `#${activeSection.id}` || href.endsWith(`#${activeSection.id}`));
+      link.classList.toggle('header__nav-link--active', Boolean(isActive));
     });
-  }, {
-    threshold: 0.3,
-    rootMargin: '-100px 0px -100px 0px'
-  });
+  }
 
-  sections.forEach(section => observer.observe(section));
+  window.addEventListener('scroll', updateActiveLink, { passive: true });
+  window.addEventListener('resize', updateActiveLink);
+  updateActiveLink();
 }
