@@ -27,7 +27,7 @@ function updateHeroStats() {
   const elKecamatan = document.getElementById('hero-stat-kecamatan');
   const elKategori = document.getElementById('hero-stat-kategori');
 
-  if (elRecipes) elRecipes.textContent = `${recipesCount}+`;
+  if (elRecipes) elRecipes.textContent = `${recipesCount}`;
   if (elPrice && isFinite(minPrice)) elPrice.textContent = `Rp ${formatNumber(minPrice)}`;
   if (elKecamatan) elKecamatan.textContent = `${kecamatanCount}`;
   if (elKategori) elKategori.textContent = `${kategoriCount || 5}`;

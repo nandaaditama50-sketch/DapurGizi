@@ -143,18 +143,6 @@
   box-shadow: 0 2px 12px rgba(249, 168, 37, 0.5);
 }
 
-.budget__slider-fill {
-  position: absolute;
-  left: 0;
-  top: 50%;
-  height: 8px;
-  transform: translateY(-50%);
-  background: linear-gradient(to right, var(--color-accent-400), var(--color-accent-500));
-  border-radius: var(--radius-full);
-  pointer-events: none;
-  transition: width 0.1s ease;
-}
-
 .budget__slider-display {
   display: flex;
   justify-content: space-between;

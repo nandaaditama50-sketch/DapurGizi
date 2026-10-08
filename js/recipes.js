@@ -96,7 +96,7 @@ export function filterAndRender() {
   const countAll = document.getElementById('count-all');
   const countFav = document.getElementById('count-favorites');
   if (countAll) countAll.textContent = filtered.length;
-  if (countFav) countFav.textContent = favorites.size !== undefined ? favorites.length : 0;
+  if (countFav) countFav.textContent = favorites.length;
 
   if (activeTab === 'favorites') {
     renderRecipes(favorites);
@@ -105,13 +105,13 @@ export function filterAndRender() {
   }
 }
 
-export function filterRecipes() {
+export function filterRecipes(kategoriGizi = '') {
   const categoryFilter = document.getElementById('filter-kategori-gizi');
   const foodTypeFilter = document.getElementById('filter-kategori-makanan');
   const budgetSlider = document.getElementById('filter-budget-slider');
   const searchInput = document.getElementById('filter-search');
 
-  if (categoryFilter) categoryFilter.value = '';
+  if (categoryFilter) categoryFilter.value = kategoriGizi;
   if (foodTypeFilter) foodTypeFilter.value = '';
   if (budgetSlider) budgetSlider.value = budgetSlider.max;
   if (searchInput) searchInput.value = '';

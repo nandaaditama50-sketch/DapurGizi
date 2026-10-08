@@ -133,6 +133,6 @@ export function checkStunting() {
 }
 
 export function scrollToRecipes() {
-  filterRecipes();
+  filterRecipes('bayi_mpasi');
   document.getElementById('recipes').scrollIntoView({ behavior: 'smooth' });
 }

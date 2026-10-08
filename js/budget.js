@@ -5,7 +5,6 @@ import { formatNumber } from './utils.js';
 export function initMainBudgetSlider() {
   const slider = document.getElementById('budget-slider');
   const valueDisplay = document.getElementById('budget-slider-value');
-  const fill = document.getElementById('budget-slider-fill');
 
   if (!slider || !valueDisplay) return;
 
@@ -14,9 +13,8 @@ export function initMainBudgetSlider() {
     const min = parseInt(slider.min);
     const max = parseInt(slider.max);
     const pct = ((val - min) / (max - min)) * 100;
-
     valueDisplay.textContent = `Rp ${formatNumber(val)}`;
-    if (fill) fill.style.width = `${pct}%`;
+    valueDisplay.textContent = `Rp ${formatNumber(val)}`;
     slider.style.background = `linear-gradient(to right, var(--color-accent-400) ${pct}%, rgba(255,255,255,0.2) ${pct}%)`;
   };
 
