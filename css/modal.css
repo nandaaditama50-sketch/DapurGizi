@@ -1,0 +1,306 @@
+/* ===== Recipe Detail Modal ===== */
+.modal {
+  position: fixed;
+  inset: 0;
+  z-index: 2000;
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(6px);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  padding: var(--space-4);
+}
+
+.modal.active {
+  display: flex;
+}
+
+.modal__overlay {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+}
+
+.modal__dialog {
+  background: var(--color-neutral-0);
+  border-radius: var(--radius-2xl);
+  max-width: 720px;
+  width: 100%;
+  max-height: 92vh;
+  overflow-y: auto;
+  position: relative;
+  z-index: 1;
+  animation: scaleIn 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+  scrollbar-width: thin;
+  scrollbar-color: var(--color-primary-200) transparent;
+}
+
+/* ─── Modal Header (Image) ─── */
+.modal__header {
+  position: relative;
+  height: 280px;
+  overflow: hidden;
+  border-radius: var(--radius-2xl) var(--radius-2xl) 0 0;
+}
+
+.modal__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.modal__header-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.75) 0%, rgba(0,0,0,0.1) 50%, transparent 100%);
+}
+
+/* Close button */
+.modal__close {
+  position: absolute;
+  top: var(--space-4);
+  right: var(--space-4);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  color: white;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: var(--transition-fast);
+  z-index: 3;
+  cursor: pointer;
+}
+
+.modal__close:hover {
+  background: rgba(255, 255, 255, 0.35);
+  transform: scale(1.1);
+}
+
+/* Fav button on modal header */
+.modal__fav-btn {
+  position: absolute;
+  top: var(--space-4);
+  right: calc(var(--space-4) + 48px);
+  width: 40px;
+  height: 40px;
+  border-radius: var(--radius-full);
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  border: 1.5px solid rgba(255, 255, 255, 0.4);
+  font-size: 1.2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: var(--transition-fast);
+  z-index: 3;
+}
+
+.modal__fav-btn:hover {
+  transform: scale(1.2);
+  background: rgba(220, 20, 60, 0.3);
+}
+
+/* Price tag on modal header */
+.modal__price {
+  position: absolute;
+  bottom: var(--space-4);
+  right: var(--space-4);
+  color: #ffffff;
+  text-shadow:
+    -1.5px -1.5px 0 #000,
+    1.5px -1.5px 0 #000,
+    -1.5px 1.5px 0 #000,
+    1.5px 1.5px 0 #000;
+  font-size: var(--text-base);
+  font-weight: 800;
+  z-index: 3;
+}
+
+/* ─── Modal Body ─── */
+.modal__body {
+  padding: var(--space-6);
+}
+
+.modal__title {
+  font-family: var(--font-heading);
+  font-size: var(--text-3xl);
+  color: var(--color-primary-800);
+  margin-bottom: var(--space-3);
+  line-height: 1.2;
+}
+
+.modal__meta {
+  display: flex;
+  gap: var(--space-3);
+  flex-wrap: wrap;
+  margin-bottom: var(--space-4);
+}
+
+.modal__meta-tag {
+  display: flex;
+  align-items: center;
+  gap: var(--space-1);
+  font-size: var(--text-sm);
+  color: var(--color-neutral-600);
+  background: var(--color-neutral-100);
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+}
+
+/* Kategori Gizi badges in modal */
+.modal__kategori {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin-bottom: var(--space-5);
+}
+
+.modal__kategori-badge {
+  padding: var(--space-1) var(--space-3);
+  border-radius: var(--radius-full);
+  font-size: var(--text-sm);
+  font-weight: 600;
+}
+
+.modal__kategori-badge--bayi_mpasi   { background: #e3f2fd; color: #1565c0; }
+.modal__kategori-badge--dewasa       { background: #f3e5f5; color: #6a1b9a; }
+.modal__kategori-badge--ibu_hamil    { background: #fce4ec; color: #c62828; }
+.modal__kategori-badge--ibu_menyusui { background: #e8f5e9; color: #2e7d32; }
+.modal__kategori-badge--keluarga     { background: #fff8e1; color: #e65100; }
+
+/* Info Anak Kecil box */
+.modal__info-anak {
+  background: linear-gradient(135deg, #fff8e1 0%, #fff3cd 100%);
+  border: 1.5px solid #f9a825;
+  border-radius: var(--radius-xl);
+  padding: var(--space-4) var(--space-5);
+  margin-bottom: var(--space-5);
+}
+
+.modal__info-anak-header {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2);
+  margin-bottom: var(--space-2);
+  font-size: 1rem;
+}
+
+.modal__info-anak-header strong {
+  color: var(--color-accent-600);
+  font-family: var(--font-heading);
+}
+
+.modal__info-anak p {
+  font-size: var(--text-base);
+  color: #5d4037;
+  line-height: 1.7;
+  font-style: italic;
+}
+
+/* ─── Sections ─── */
+.modal__section {
+  margin-bottom: var(--space-6);
+}
+
+.modal__section-title {
+  font-family: var(--font-heading);
+  font-size: var(--text-lg);
+  font-weight: 600;
+  color: var(--color-primary-800);
+  margin-bottom: var(--space-4);
+}
+
+/* Nutrition grid */
+.modal__nutrition {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--space-3);
+}
+
+.modal__nutrition-item {
+  text-align: center;
+  padding: var(--space-3);
+  background: var(--color-primary-50);
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--color-primary-100);
+}
+
+.modal__nutrition-value {
+  font-family: var(--font-heading);
+  font-size: var(--text-xl);
+  font-weight: 700;
+  color: var(--color-primary-700);
+  display: block;
+}
+
+.modal__nutrition-label {
+  font-size: var(--text-xs);
+  color: var(--color-neutral-500);
+  margin-top: 4px;
+  display: block;
+}
+
+/* Lists */
+.modal__list {
+  padding-left: 0;
+  list-style: none;
+}
+
+.modal__list--ingredients li {
+  padding: var(--space-2) 0;
+  border-bottom: 1px solid var(--color-neutral-100);
+  font-size: var(--text-base);
+  color: var(--color-neutral-700);
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  line-height: 1.5;
+}
+
+.modal__list--ingredients li::before {
+  content: '•';
+  color: var(--color-primary-500);
+  font-size: 1.4rem;
+  font-weight: bold;
+  flex-shrink: 0;
+}
+
+.modal__list--steps {
+  counter-reset: steps;
+}
+
+.modal__list--steps li {
+  counter-increment: steps;
+  padding: var(--space-3) 0 var(--space-3) var(--space-10);
+  position: relative;
+  font-size: var(--text-base);
+  color: var(--color-neutral-700);
+  line-height: 1.7;
+  border-left: 2px solid var(--color-primary-100);
+  margin-left: var(--space-5);
+  margin-bottom: var(--space-2);
+}
+
+.modal__list--steps li::before {
+  content: counter(steps);
+  position: absolute;
+  left: calc(-1rem - 13px);
+  top: var(--space-3);
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background: var(--color-primary-500);
+  color: white;
+  font-size: var(--text-xs);
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

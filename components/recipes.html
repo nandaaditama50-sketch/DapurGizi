@@ -1,0 +1,96 @@
+<!-- ===== Recipes Section ===== -->
+  <section class="recipes" id="recipes">
+    <div class="container">
+      <div class="recipes__header reveal">
+        <div class="badge badge--accent">🍳 Resep Pilihan</div>
+        <h2 class="section-title">Resep Padat Gizi<br>dari Bahan Lokal</h2>
+        <p class="section-subtitle">Resep yang dikurasi khusus menggunakan bahan pangan lokal Banjarnegara dengan harga terjangkau. Sesuaikan kecamatan dan kebutuhan gizi keluarga Anda.</p>
+      </div>
+
+      <!-- Filters -->
+      <div class="recipes__filters reveal" id="recipe-filters">
+
+        <!-- Kecamatan Selection (Buttons for Desktop, Dropdown for Mobile) -->
+        <div class="filter-group filter-group--full">
+          <label class="filter-group__label" for="kecamatan-select-mobile">📍 Pilih Kecamatan</label>
+          
+          <!-- Mobile Dropdown Select -->
+          <div class="kecamatan-dropdown-mobile">
+            <select class="filter-group__select" id="kecamatan-select-mobile">
+              <option value="">Semua Kecamatan (8 Kecamatan)</option>
+            </select>
+          </div>
+
+          <!-- Desktop Buttons -->
+          <div class="kecamatan-buttons" id="kecamatan-buttons">
+            <button class="kec-btn kec-btn--active" data-kecamatan="" id="kec-btn-all">Semua</button>
+            <!-- Buttons populated by JS -->
+          </div>
+        </div>
+
+        <!-- Kategori Gizi Dropdown (mobile-friendly) -->
+        <div class="filter-row">
+          <div class="filter-group">
+            <label class="filter-group__label" for="filter-kategori-gizi">👶 Kategori Gizi</label>
+            <select class="filter-group__select" id="filter-kategori-gizi">
+              <option value="">Semua Kategori</option>
+              <option value="bayi_mpasi">🍼 Bayi MPASI (6–24 bln)</option>
+              <option value="dewasa">🧑 Dewasa</option>
+              <option value="ibu_hamil">🤰 Ibu Hamil</option>
+              <option value="ibu_menyusui">🤱 Ibu Menyusui</option>
+              <option value="keluarga">👨‍👩‍👧‍👦 Keluarga</option>
+            </select>
+          </div>
+
+          <div class="filter-group">
+            <label class="filter-group__label" for="filter-kategori-makanan">🍽️ Jenis Makanan</label>
+            <select class="filter-group__select" id="filter-kategori-makanan">
+              <option value="">Semua Jenis</option>
+              <option value="Sarapan">Sarapan</option>
+              <option value="Makan Siang">Makan Siang</option>
+              <option value="Makan Malam">Makan Malam</option>
+              <option value="Lauk">Lauk</option>
+              <option value="Camilan">Camilan</option>
+            </select>
+          </div>
+        </div>
+
+        <!-- Budget Slider -->
+        <div class="filter-group filter-group--full">
+          <label class="filter-group__label">💰 Anggaran Maksimal per Sajian</label>
+          <div class="budget-slider-wrapper">
+            <input type="range" id="filter-budget-slider" class="budget-slider"
+              min="5000" max="20000" step="1000" value="20000">
+            <div class="budget-slider-labels">
+              <span>Rp 5.000</span>
+              <span class="budget-slider-value" id="budget-slider-display">Semua harga</span>
+              <span>Rp 20.000</span>
+            </div>
+          </div>
+        </div>
+
+        <!-- Search Bar -->
+        <div class="filter-group filter-group--full recipes__search-bar">
+          <input type="text" id="filter-search" class="filter-group__input" placeholder="🔍 Cari nama resep atau bahan...">
+        </div>
+
+      </div>
+
+      <!-- Favorites Tab -->
+      <div class="recipes__tabs reveal" id="recipe-tabs">
+        <button class="recipes__tab recipes__tab--active" id="tab-all" data-tab="all">
+          🍽️ Semua Resep
+          <span class="recipes__tab-count" id="count-all">0</span>
+        </button>
+        <button class="recipes__tab" id="tab-favorites" data-tab="favorites">
+          ❤️ Favorit Saya
+          <span class="recipes__tab-count" id="count-favorites">0</span>
+        </button>
+      </div>
+
+      <!-- Recipe Grid -->
+      <div class="recipes__grid" id="recipes-grid">
+        <!-- Cards will be populated by JavaScript -->
+      </div>
+    </div>
+  </section>

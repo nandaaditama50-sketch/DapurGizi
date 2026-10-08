@@ -1,0 +1,93 @@
+<!-- ===== Stunting Screening Section ===== -->
+  <section class="screening" id="screening">
+    <div class="container">
+      <div class="screening__inner">
+        <div class="screening__info reveal">
+          <div class="badge badge--primary">📊 Skrining Mandiri</div>
+          <h2 class="section-title">Cek Risiko Stunting Anak Anda</h2>
+          <p class="section-subtitle">Deteksi dini adalah kunci pencegahan stunting. Masukkan data anak Anda untuk mendapatkan hasil skrining awal berdasarkan standar WHO/Kemenkes.</p>
+
+          <ul class="screening__info-list">
+            <li class="screening__info-item">
+              <div class="screening__info-icon">📏</div>
+              <div class="screening__info-text">
+                <h4>Pengukuran Sederhana</h4>
+                <p>Cukup masukkan umur, berat badan, dan tinggi badan anak. Tidak perlu data medis lain.</p>
+              </div>
+            </li>
+            <li class="screening__info-item">
+              <div class="screening__info-icon">🏥</div>
+              <div class="screening__info-text">
+                <h4>Standar WHO & Kemenkes</h4>
+                <p>Perhitungan mengacu pada standar antropometri resmi untuk anak usia 0-60 bulan.</p>
+              </div>
+            </li>
+            <li class="screening__info-item">
+              <div class="screening__info-icon">🍽️</div>
+              <div class="screening__info-text">
+                <h4>Rekomendasi Gizi</h4>
+                <p>Hasil skrining disertai rekomendasi menu padat gizi dari bahan lokal Banjarnegara.</p>
+              </div>
+            </li>
+            <li class="screening__info-item">
+              <div class="screening__info-icon">🔒</div>
+              <div class="screening__info-text">
+                <h4>Data Privasi Aman</h4>
+                <p>Data tidak disimpan di server. Semua perhitungan dilakukan langsung di perangkat Anda.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="reveal">
+          <div class="screening__form-card" id="screening-form-card">
+            <h3 class="screening__form-title">📋 Form Skrining Anak</h3>
+            <p class="screening__form-subtitle">Isi data di bawah untuk mengetahui status gizi anak Anda</p>
+
+            <div class="screening__form-group">
+              <label class="screening__form-label" for="screening-gender">Jenis Kelamin Anak</label>
+              <select class="screening__form-select" id="screening-gender">
+                <option value="">Pilih Jenis Kelamin</option>
+                <option value="L">Laki-laki</option>
+                <option value="P">Perempuan</option>
+              </select>
+            </div>
+
+            <div class="screening__form-group">
+              <label class="screening__form-label" for="screening-age">Umur Anak (bulan)</label>
+              <input type="number" class="screening__form-input" id="screening-age" placeholder="cth: 24" min="0" max="60">
+            </div>
+
+            <div class="screening__form-row">
+              <div class="screening__form-group">
+                <label class="screening__form-label" for="screening-weight">Berat Badan (kg)</label>
+                <input type="number" class="screening__form-input" id="screening-weight" placeholder="cth: 10.5" min="0" step="0.1">
+              </div>
+              <div class="screening__form-group">
+                <label class="screening__form-label" for="screening-height">Tinggi Badan (cm)</label>
+                <input type="number" class="screening__form-input" id="screening-height" placeholder="cth: 82" min="0" step="0.1">
+              </div>
+            </div>
+
+            <button class="btn btn--primary btn--lg screening__form-submit" id="btn-check-stunting">
+              🔍 Cek Risiko Stunting
+            </button>
+
+            <p class="screening__form-note">
+              ⚠️ Hasil skrining ini bersifat awal dan bukan diagnosis medis. Untuk pemeriksaan lebih lanjut, konsultasikan dengan tenaga kesehatan.
+            </p>
+
+            <!-- Result -->
+            <div class="screening__result" id="screening-result">
+              <div class="screening__result-header">
+                <span class="screening__result-icon" id="result-icon"></span>
+                <span class="screening__result-status" id="result-status"></span>
+              </div>
+              <div class="screening__result-details" id="result-details"></div>
+              <div class="screening__result-cta" id="result-cta"></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

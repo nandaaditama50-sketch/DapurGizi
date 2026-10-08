@@ -1,37 +1,10 @@
 [
-  {
-    "id": "banjarnegara",
-    "nama": "Banjarnegara (Kota)",
-    "bahanDominan": ["tempe", "tahu", "bayam", "kangkung", "telur", "wortel", "jagung"]
-  },
-  {
-    "id": "purwonegoro",
-    "nama": "Purwonegoro",
-    "bahanDominan": ["tempe", "bayam", "kacang panjang", "ikan mujair", "singkong", "jagung"]
-  },
-  {
-    "id": "bawang",
-    "nama": "Bawang",
-    "bahanDominan": ["bayam", "kacang hijau", "labu siam", "ubi jalar", "daun kelor", "tempe"]
-  },
-  {
-    "id": "madukara",
-    "nama": "Madukara",
-    "bahanDominan": ["ubi jalar", "singkong", "bayam", "jagung", "telur", "ikan mujair"]
-  },
-  {
-    "id": "sigaluh",
-    "nama": "Sigaluh",
-    "bahanDominan": ["daun kelor", "singkong", "kacang hijau", "tempe", "ubi jalar"]
-  },
-  {
-    "id": "mandiraja",
-    "nama": "Mandiraja",
-    "bahanDominan": ["ikan mujair", "tempe", "tahu", "kacang panjang", "bayam", "singkong"]
-  },
-  {
-    "id": "pagedongan",
-    "nama": "Pagedongan",
-    "bahanDominan": ["singkong", "ubi jalar", "daun kelor", "jagung", "kacang tanah"]
-  }
+  { "id": "batur",        "nama": "Batur",        "bahanDominan": ["kentang", "kubis", "tempe", "daun kelor", "wortel"] },
+  { "id": "pejawaran",   "nama": "Pejawaran",    "bahanDominan": ["singkong", "ubi jalar", "kangkung", "pisang"] },
+  { "id": "pagentan",    "nama": "Pagentan",     "bahanDominan": ["tempe", "tahu", "bayam", "kacang panjang"] },
+  { "id": "wanayasa",    "nama": "Wanayasa",     "bahanDominan": ["daun kelor", "kacang tanah", "singkong", "jagung"] },
+  { "id": "kalibening",  "nama": "Kalibening",   "bahanDominan": ["kacang hijau", "telur", "tempe", "ubi jalar"] },
+  { "id": "pandanarum",  "nama": "Pandanarum",   "bahanDominan": ["jamur", "bayam", "singkong", "daun kelor"] },
+  { "id": "karangkobar", "nama": "Karangkobar",  "bahanDominan": ["kubis", "kentang", "daun kelor", "wortel"] },
+  { "id": "punggelan",   "nama": "Punggelan",    "bahanDominan": ["kacang tanah", "tempe", "tahu", "kacang hijau"] }
 ]

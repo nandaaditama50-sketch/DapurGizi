@@ -1,0 +1,51 @@
+<!-- ===== Recipe Modal ===== -->
+  <div class="modal" id="recipe-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal__overlay"></div>
+    <div class="modal__dialog">
+      <div class="modal__header">
+        <img class="modal__image" id="modal-image" src="" alt="">
+        <div class="modal__header-overlay">
+          <button class="modal__close" id="modal-close" aria-label="Tutup modal">✕</button>
+          <button class="modal__fav-btn" id="modal-fav-btn" aria-label="Tambah ke favorit" title="Simpan ke favorit">
+            <span id="modal-fav-icon">🤍</span>
+          </button>
+          <span class="modal__price" id="modal-price"></span>
+        </div>
+      </div>
+
+      <div class="modal__body">
+        <h2 class="modal__title" id="modal-title"></h2>
+        <div class="modal__meta" id="modal-meta"></div>
+
+        <!-- Kategori Badges -->
+        <div class="modal__kategori" id="modal-kategori"></div>
+
+        <!-- Info Anak Kecil -->
+        <div class="modal__info-anak" id="modal-info-anak" style="display:none;">
+          <div class="modal__info-anak-header">
+            <span>🧒</span>
+            <strong>Info untuk Anak-Anak</strong>
+          </div>
+          <p id="modal-info-anak-text"></p>
+        </div>
+
+        <!-- Nutrition -->
+        <div class="modal__section">
+          <h3 class="modal__section-title">📊 Kandungan Gizi per Sajian</h3>
+          <div class="modal__nutrition" id="modal-nutrition"></div>
+        </div>
+
+        <!-- Ingredients -->
+        <div class="modal__section">
+          <h3 class="modal__section-title">🛒 Bahan-Bahan</h3>
+          <ul class="modal__list modal__list--ingredients" id="modal-ingredients"></ul>
+        </div>
+
+        <!-- Steps -->
+        <div class="modal__section">
+          <h3 class="modal__section-title">👨‍🍳 Cara Memasak</h3>
+          <ol class="modal__list modal__list--steps" id="modal-steps"></ol>
+        </div>
+      </div>
+    </div>
+  </div>

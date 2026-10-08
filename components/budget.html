@@ -1,0 +1,103 @@
+<!-- ===== Budget Calculator Section ===== -->
+  <section class="budget" id="budget">
+    <div class="container">
+      <div class="budget__inner">
+        <div class="budget__text reveal">
+          <div class="badge badge--accent">💰 Kalkulator Anggaran</div>
+          <h2 class="section-title">Masak Bergizi dengan Budget Terbatas</h2>
+          <p class="section-subtitle">Geser slider untuk mengatur anggaran mingguan, kami akan merekomendasikan kombinasi menu dari bahan lokal yang sesuai budget.</p>
+
+          <ul class="screening__info-list" style="margin-top: 2rem;">
+            <li class="screening__info-item">
+              <div class="screening__info-icon" style="background: rgba(255,255,255,0.1);">💡</div>
+              <div class="screening__info-text">
+                <h4 style="color: white;">Budget Hemat</h4>
+                <p style="color: rgba(255,255,255,0.6);">Mulai dari Rp 35.000/minggu sudah bisa menyiapkan menu bergizi dari bahan lokal.</p>
+              </div>
+            </li>
+            <li class="screening__info-item">
+              <div class="screening__info-icon" style="background: rgba(255,255,255,0.1);">🌿</div>
+              <div class="screening__info-text">
+                <h4 style="color: white;">Bahan Lokal</h4>
+                <p style="color: rgba(255,255,255,0.6);">Semua resep menggunakan bahan yang mudah ditemukan di pasar tradisional Banjarnegara.</p>
+              </div>
+            </li>
+            <li class="screening__info-item">
+              <div class="screening__info-icon" style="background: rgba(255,255,255,0.1);">📅</div>
+              <div class="screening__info-text">
+                <h4 style="color: white;">Anggaran Mingguan</h4>
+                <p style="color: rgba(255,255,255,0.6);">Rekomendasi dihitung per minggu agar perencanaan belanja lebih praktis.</p>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="budget__form reveal" id="budget-form-card">
+          <h3 class="budget__form-title">🧮 Hitung Menu Mingguan</h3>
+
+          <!-- Kecamatan Dropdown -->
+          <div class="budget__form-group">
+            <label class="budget__form-label" for="budget-kecamatan">📍 Pilih Kecamatan</label>
+            <select class="budget__form-select" id="budget-kecamatan">
+              <option value="">Semua Kecamatan</option>
+            </select>
+          </div>
+
+          <!-- Kategori Gizi Dropdown -->
+          <div class="budget__form-group">
+            <label class="budget__form-label" for="budget-kategori-gizi">👶 Kebutuhan Gizi Utama</label>
+            <select class="budget__form-select" id="budget-kategori-gizi">
+              <option value="">Semua Kategori</option>
+              <option value="bayi_mpasi">🍼 Bayi MPASI (6–24 bln)</option>
+              <option value="dewasa">🧑 Dewasa</option>
+              <option value="ibu_hamil">🤰 Ibu Hamil</option>
+              <option value="ibu_menyusui">🤱 Ibu Menyusui</option>
+              <option value="keluarga">👨‍👩‍👧‍👦 Keluarga</option>
+            </select>
+          </div>
+
+          <!-- Jumlah Anggota Keluarga -->
+          <div class="budget__form-group">
+            <label class="budget__form-label" for="budget-anggota">👨‍👩‍👧‍👦 Jumlah Anggota Keluarga</label>
+            <select class="budget__form-select" id="budget-anggota">
+              <option value="1">1 Orang</option>
+              <option value="2">2 Orang</option>
+              <option value="3" selected>3 Orang (Default)</option>
+              <option value="4">4 Orang</option>
+              <option value="5">5+ Orang</option>
+            </select>
+          </div>
+
+          <!-- Budget Slider (Adam style) -->
+          <div class="budget__form-group">
+            <label class="budget__form-label">💰 Anggaran per Minggu</label>
+            <div class="budget__slider-container">
+              <div class="budget__slider-track">
+                <input type="range" id="budget-slider" class="budget__slider"
+                  min="35000" max="900000" step="5000" value="200000">
+                <div class="budget__slider-fill" id="budget-slider-fill"></div>
+              </div>
+              <div class="budget__slider-display">
+                <span class="budget__slider-min">Rp 35.000</span>
+                <div class="budget__slider-value-box">
+                  <span class="budget__slider-label">Anggaran Minggu Ini</span>
+                  <span class="budget__slider-value" id="budget-slider-value">Rp 200.000</span>
+                </div>
+                <span class="budget__slider-max">Rp 900.000</span>
+              </div>
+            </div>
+          </div>
+
+          <button class="btn btn--accent btn--lg budget__form-submit" id="btn-calc-budget">
+            ✨ Cari Menu Sesuai Budget
+          </button>
+
+          <!-- Results -->
+          <div class="budget__results" id="budget-results">
+            <div id="budget-results-list"></div>
+            <div class="budget__total" id="budget-total"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>

@@ -1,0 +1,51 @@
+[
+  {
+    "id": "bayi-mpasi",
+    "nama": "Bayi & MPASI",
+    "emoji": "👶",
+    "singkat": "Usia 6-24 bulan (pendamping ASI)",
+    "warna": "blue",
+    "boleh": ["Bubur beras/tim halus", "Pisang kerok", "Alpukat", "Labu kuning kukus", "Ubi/kentang halus", "Kacang hijau kupas halus", "Telur (kuning/matang)", "Ikan tanpa duri (masak lembut)", "Hati ayam halus", "Wortel/brokoli kukus"],
+    "batasi": ["Garam & gula berlebih", "Madu (untuk < 1 tahun)", "Cabai & rempah tajam", "Susu sapi murni (< 1 tahun)", "Makanan keras/kenyal", "Bahan pengawet/penyedap", "Gorengan berlebihan"],
+    "catatan": "Tekstur harus bertahap (halus ke cincang). Berikan porsi kecil namun sering (2-3 kali makan utama)."
+  },
+  {
+    "id": "ibu-hamil",
+    "nama": "Ibu Hamil",
+    "emoji": "🤰",
+    "singkat": "Nutrisi janin & cegah anemia",
+    "warna": "green",
+    "boleh": ["Daun kelor (kaya zat besi)", "Bayam & sayur hijau", "Kacang-kacangan", "Telur matang sempurna", "Ikan & protein hewani", "Buah bervitamin C (jeruk)", "Susu ibu hamil/kedelai", "Hati ayam (secukupnya)"],
+    "batasi": ["Ikan/daging mentah", "Telur setengah matang", "Kafein berlebih (kopi/teh)", "Garam tinggi", "Makanan kaleng"],
+    "catatan": "Butuh ekstra protein hewani dan zat besi setiap hari untuk cegah stunting sejak dalam kandungan."
+  },
+  {
+    "id": "menyusui",
+    "nama": "Ibu Menyusui",
+    "emoji": "🤱",
+    "singkat": "Meningkatkan kualitas & volume ASI",
+    "warna": "teal",
+    "boleh": ["Daun kelor (pelancar ASI)", "Ikan teri/mujair (kalsium)", "Kacang hijau & kacang tanah", "Telur & ayam", "Sayur bening", "Banyak air putih", "Buah segar"],
+    "batasi": ["Kafein berlebih", "Alkohol", "Makanan terlalu pedas/tajam (jika bayi sensitif)", "Makanan rendah nutrisi"],
+    "catatan": "Ibu butuh tambahan sekitar 500 kalori dan banyak cairan untuk produksi ASI yang optimal."
+  },
+  {
+    "id": "dewasa",
+    "nama": "Dewasa Aktif",
+    "emoji": "🧑",
+    "singkat": "Menjaga daya tahan & energi",
+    "warna": "orange",
+    "boleh": ["Nasi/ubi/singkong", "Tempe & tahu", "Sayur tumis/bening", "Ikan & telur", "Kacang-kacangan", "Buah lokal"],
+    "batasi": ["Gorengan berlebih", "Minuman manis", "Garam tinggi (cegah hipertensi)", "Makanan cepat saji"],
+    "catatan": "Gunakan pola Isi Piringku: 1/2 sayur & buah, 1/4 karbohidrat, 1/4 lauk pauk."
+  },
+  {
+    "id": "keluarga",
+    "nama": "Keluarga Sehat",
+    "emoji": "🏠",
+    "singkat": "Menu seimbang harga terjangkau",
+    "boleh": ["Semua olahan bahan lokal", "Tempe tahu setiap hari", "Telur & ikan", "Aneka sayuran musiman", "Ubi & singkong selingan"],
+    "batasi": ["Penyedap rasa berlebih", "Makanan instan", "Minyak goreng berulang"],
+    "catatan": "Menu bervariasi setiap hari menjaga selera makan dan kecukupan gizi seluruh anggota keluarga."
+  }
+]
