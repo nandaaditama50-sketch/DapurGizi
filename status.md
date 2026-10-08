@@ -1,6 +1,6 @@
 # Status Pengembangan — DapurGizi Nusantara
 
-> **Terakhir diperbarui:** 8 Oktober 2026, 14:48 WIB  
+> **Terakhir diperbarui:** 8 Oktober 2026, 18:33 WIB  
 > **Auditor & Lead Dev:** Senior Frontend / UI/UX / QA Engineer  
 > **Status:** Performance Optimization in Progress; deploy-time LCP issue under investigation for Netlify.
 
@@ -14,9 +14,10 @@ Project DapurGizi Nusantara saat ini fokus pada optimasi performa dan stabilitas
 
 | Area | Status | Catatan |
 |---|---|---|
-| CSS import chain | ✅ Selesai | CSS aggregator dihapus dan file style dipasang secara langsung agar browser tidak menunggu `@import` berantai. |
+| CSS homepage | 🔄 Berjalan | `index.html` memuat `index.css`, yang mengimpor stylesheet modular di folder `css/`. Ini bukan satu file bundle; dampak rantai `@import` terhadap performa perlu diperhitungkan. |
 | Hero image LCP | ✅ Selesai | Gambar besar di hero sudah diganti ke versi responsif `.webp` yang lebih kecil dan diberi `fetchpriority="high"`. |
-| Single CSS request | ✅ Selesai | Beberapa CSS file digabung menjadi satu `site.css` untuk mengurangi request overhead. |
+| CSS stylesheet lama | ✅ Diperbarui | Referensi `site.css` diganti ke `index.css`; `site.css` tidak tersedia di project. |
+| Navigasi saat scroll | ✅ Selesai | Tautan navigasi aktif mengikuti bagian halaman yang sedang dilewati, termasuk bagian Resep yang panjang. |
 | Asset cache headers | ✅ Selesai | File `netlify.toml` dibuat agar aset statis bisa disimpan di cache browser/CDN. |
 | Dead render blockers | ✅ Selesai | Font import dari Google Fonts dihapus dari CSS base untuk menghindari network delay. |
 
@@ -69,14 +70,13 @@ Buka `http://localhost:8000` di browser.
 d:\source code\web dev\
 ├── index.html              ← Entry point (Homepage)
 ├── team.html               ← Halaman Tim Kami
-├── site.css                ← CSS bundle hasil optimasi
 ├── netlify.toml            ← Netlify cache header configuration
 ├── audit_report.md         ← Laporan Audit Lengkap
 ├── status.md               ← Laporan Status Pengawasan
 ├── assets/images/          ← Background, foto anggota (webp/jpg), dan resep
 ├── components/             ← Partial HTML (header, hero, features, recipes, budget, screening, footer, modal)
-├── css/                    ← Modular styles (base, header, hero, features, recipes, budget, screening, team, footer, responsive)
+├── css/                    ← Modular styles yang diimpor index.css (termasuk team.css)
 ├── data/                   ← Data JSON (recipes.json, kecamatan.json, kategori.json)
 ├── js/                     ← ES Modules (app.js, state.js, recipes.js, budget.js, screening.js, team-app.js, ui.js, utils.js)
-└── index.css               ← File legacy; saat ini tidak digunakan untuk load utama
+└── index.css               ← Aggregator stylesheet untuk halaman utama dan halaman tim
 ```
