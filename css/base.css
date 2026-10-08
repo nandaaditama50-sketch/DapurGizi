@@ -3,9 +3,6 @@
    Inspired by Acreflow Agriculture Website
    =================================== */
 
-/* Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800&display=swap');
-
 /* CSS Custom Properties / Design Tokens */
 :root {
   /* Primary - Deep Greens (Nature/Agriculture inspired) */
@@ -50,8 +47,8 @@
   --color-status-danger: #c62828;
 
   /* Typography */
-  --font-heading: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
-  --font-body: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  --font-heading: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
+  --font-body: 'Segoe UI', 'Helvetica Neue', Arial, sans-serif;
 
   /* Font Sizes - Fluid Typography */
   --text-xs: clamp(0.7rem, 0.65rem + 0.2vw, 0.75rem);

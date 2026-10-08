@@ -1,37 +1,51 @@
 # Status Pengembangan — DapurGizi Nusantara
 
-> **Terakhir diperbarui:** 8 Oktober 2026, 11:24 WIB  
+> **Terakhir diperbarui:** 8 Oktober 2026, 14:48 WIB  
 > **Auditor & Lead Dev:** Senior Frontend / UI/UX / QA Engineer  
-> **Status:** Frontend MVP Siap Rilis; Perbaikan Audit 18 Masalah Selesai 100%.
+> **Status:** Performance Optimization in Progress; deploy-time LCP issue under investigation for Netlify.
 
 ## Ringkasan
 
-Project DapurGizi Nusantara telah diaudit secara menyeluruh dan dilakukan 18 perbaikan pada seluruh temuan audit. Aplikasi berbasis HTML5, CSS3, JavaScript ES Modules, dan JSON statis tanpa dependensi framework eksternal. Semua fitur telah teruji dan berjalan lancar.
+Project DapurGizi Nusantara saat ini fokus pada optimasi performa dan stabilitas produksi. Setelah audit awal selesai, perhatian utama berpindah ke pengurangan total blocking time, LCP, dan panjang critical path di deploy environment. Target utama saat ini adalah memastikan halaman utama dapat dimuat dengan cepat di Netlify, bukan hanya saat di localhost.
 
-## Audit & Fitur yang Telah Diperbaiki
+## Update Terkini
 
-| Fitur / Komponen | Status Audit | Keterangan Perbaikan |
+### Optimasi yang Sudah Dilakukan
+
+| Area | Status | Catatan |
 |---|---|---|
-| Halaman Tim Kami (`team.html`) | ✅ Selesai | Halaman `team.html` telah dibangun lengkap dengan struktur hero, profil kelompok, daftar anggota, dan kartu ketua. Gambar ketua telah dikonversi dari format `.ppm` ke `.webp` & `.jpg`. Link di header/footer yang dulunya `admin.html` (404) telah diperbaiki. |
-| Statistik Hero Dinamis | ✅ Selesai | Angka statistik pada hero tidak lagi hardcoded (`12+`, `Rp 5.000`, `8`, `5`) melainkan dihitung secara otomatis dari data state aplikasi. |
-| Dropdown Kecamatan Mobile | ✅ Selesai | Pada tampilan mobile (≤768px), tombol kecamatan yang berderet diganti secara otomatis dengan elemen `<select>` dropdown yang responsif dan nyaman digunakan di layar sentuh. |
-| Pemuatan Data & Kategori | ✅ Selesai | `kategori.json` kini di-load bersama `recipes.json` dan `kecamatan.json`. State terpusat di `state.js` mengelola seluruh data secara konsisten. |
-| Debounce Budget Slider | ✅ Selesai | Slider anggaran pada bagian resep telah di-debounce untuk mencegah re-render berlebihan saat pengguna menggeser slider. |
-| Rekomendasi Menu Personalisasi | ✅ Selesai | Kalkulator anggaran kini menyertakan input **Jumlah Anggota Keluarga** dan algoritma penilaian gizi berbasis skor nutrisi (protein, zat besi, kalori per rupiah) serta bonus komoditas lokal per kecamatan. |
-| Alignment Kalkulator Anggaran Desktop | ✅ Selesai | Kolom penjelasan dan card “Hitung Menu Mingguan” disejajarkan dari atas. Sudah diuji setelah hasil rekomendasi tampil; posisi atas kedua kolom sama. |
-| Disclaimer Medis Global | ✅ Selesai | Penafian medis profesional telah ditambahkan pada footer global dan formulir skrining stunting. |
-| Tautan & Data Kontak | ✅ Selesai | Placeholder kontak palsu (`smkn1wanayasa@example.com`, `+62 812...`) telah dibersihkan. Status di footer diperbarui secara jujur dari "Live" menjadi "Development". |
-| Perbaikan Bug UI & JS | ✅ Selesai | Fixed active nav link detection (`ui.js`), modal overlay click target (`app.js`), dead import `formatNumber`, serta penambahan `@keyframes float` di `animations.css`. |
+| CSS import chain | ✅ Selesai | CSS aggregator dihapus dan file style dipasang secara langsung agar browser tidak menunggu `@import` berantai. |
+| Hero image LCP | ✅ Selesai | Gambar besar di hero sudah diganti ke versi responsif `.webp` yang lebih kecil dan diberi `fetchpriority="high"`. |
+| Single CSS request | ✅ Selesai | Beberapa CSS file digabung menjadi satu `site.css` untuk mengurangi request overhead. |
+| Asset cache headers | ✅ Selesai | File `netlify.toml` dibuat agar aset statis bisa disimpan di cache browser/CDN. |
+| Dead render blockers | ✅ Selesai | Font import dari Google Fonts dihapus dari CSS base untuk menghindari network delay. |
+
+### Masalah yang Masih Diperhatikan di Deploy
+
+| Area | Status | Catatan |
+|---|---|---|
+| Netlify LCP | ⚠️ Masih diinvestigasi | Pengukuran di localhost cepat, tapi di deploy real network masih naik ke 3–4 detik karena runtime fetch component/data dan cold network latency. |
+| Component loading via fetch | ⚠️ Masih ada | Halaman masih memakai dynamic include daripada static pre-rendered HTML, sehingga TTFB dan network layer masih berpengaruh nyata. |
+| Data fetching runtime | ⚠️ Masih ada | `recipes.json` dan `kecamatan.json` dipanggil saat runtime, yang menambah critical path di deployment. |
 
 ---
 
-## Ringkasan Fitur Aplikasi
+## Prioritas Perbaikan Saat Ini
 
-- **Katalog Resep (12 Resep):** Lengkap dengan kandungan gizi (kalori, protein, karbohidrat, lemak, zat besi, vitamin A), harga per porsi & per minggu, waktu masak, porsi, info khusus anak kecil, serta filter interaktif.
-- **Kalkulator Anggaran Personalisasi:** Rekomendasi menu mingguan otomatis disesuaikan dengan anggaran mingguan, kecamatan, kategori gizi utama, dan jumlah anggota keluarga.
-- **Skrining Stunting Awal:** Kalkulator rasio antropometri sederhana untuk memberikan rekomendasi awal gizi anak.
-- **Favorit (LocalStorage):** Simpan resep favorit secara persisten di browser.
-- **Halaman Tim Kami (`team.html`):** Informasi kelompok 1, pembimbing, serta profil ketua dan anggota tim pengembang.
+1. Menghilangkan runtime component fetch pada halaman utama untuk mempercepat first render.  
+2. Mengubah struktur HTML menjadi lebih static / pre-rendered agar Netlify dapat menghasilkan response yang lebih cepat.  
+3. Melakukan split data + deferred rendering bila memang diperlukan agar content utama tampil lebih cepat.  
+4. Mengurangi penggunaan JS yang tidak diperlukan di initial load.  
+5. Menjaga aset hero, CSS, dan file JSON tetap ter-cache dengan header yang tepat di Netlify.  
+
+---
+
+## Kondisi Proyek
+
+- Frontend MVP: ✅ Stabil dan fungsional  
+- Audit UI/UX awal: ✅ Selesai  
+- Performa deploy production: ⚠️ Masih terus dioptimasi  
+- Target utama: menurunkan LCP di Netlify ke bawah 1 detik dalam kondisi real deployment  
 
 ---
 
@@ -55,12 +69,14 @@ Buka `http://localhost:8000` di browser.
 d:\source code\web dev\
 ├── index.html              ← Entry point (Homepage)
 ├── team.html               ← Halaman Tim Kami
-├── index.css               ← CSS Aggregator
+├── site.css                ← CSS bundle hasil optimasi
+├── netlify.toml            ← Netlify cache header configuration
 ├── audit_report.md         ← Laporan Audit Lengkap
 ├── status.md               ← Laporan Status Pengawasan
 ├── assets/images/          ← Background, foto anggota (webp/jpg), dan resep
 ├── components/             ← Partial HTML (header, hero, features, recipes, budget, screening, footer, modal)
 ├── css/                    ← Modular styles (base, header, hero, features, recipes, budget, screening, team, footer, responsive)
 ├── data/                   ← Data JSON (recipes.json, kecamatan.json, kategori.json)
-└── js/                     ← ES Modules (app.js, state.js, recipes.js, budget.js, screening.js, team-app.js, ui.js, utils.js)
+├── js/                     ← ES Modules (app.js, state.js, recipes.js, budget.js, screening.js, team-app.js, ui.js, utils.js)
+└── index.css               ← File legacy; saat ini tidak digunakan untuk load utama
 ```

@@ -19,9 +19,9 @@ export function toggleFavorite(id) {
 
 export async function loadData() {
   const [recipesRes, kecamatanRes, kategoriRes] = await Promise.all([
-    fetch('data/recipes.json'),
-    fetch('data/kecamatan.json'),
-    fetch('data/kategori.json')
+    fetch('data/recipes.json', { cache: 'force-cache' }),
+    fetch('data/kecamatan.json', { cache: 'force-cache' }),
+    fetch('data/kategori.json', { cache: 'force-cache' })
   ]);
   if (!recipesRes.ok) throw new Error('Gagal memuat data resep');
   if (!kecamatanRes.ok) throw new Error('Gagal memuat data kecamatan');
