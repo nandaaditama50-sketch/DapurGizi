@@ -122,9 +122,6 @@
     padding: var(--space-2) var(--space-3);
   }
 
-  /* Recipe tabs: convert category/kec filters to dropdown on mobile */
-  /* (already handled by select elements) */
-
   /* Screening form */
   .screening__form-row {
     grid-template-columns: 1fr;

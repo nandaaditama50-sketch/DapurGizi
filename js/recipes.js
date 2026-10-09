@@ -14,7 +14,7 @@ const KATEGORI_LABEL = {
   keluarga:       '👨‍👩‍👧‍👦 Keluarga'
 };
 
-// ─── Kecamatan Buttons & Dropdown ──────────────────────────────────────────────
+// ─── Kecamatan Buttons ─────────────────────────────────────────────────────────
 export function populateKecamatanUI() {
   // --- Recipe section kecamatan buttons ---
   const btnContainer = document.getElementById('kecamatan-buttons');
@@ -29,22 +29,6 @@ export function populateKecamatanUI() {
       btnContainer.appendChild(btn);
     });
     document.getElementById('kec-btn-all')?.addEventListener('click', () => selectKecamatan('', document.getElementById('kec-btn-all')));
-  }
-
-  // --- Recipe section kecamatan mobile select ---
-  const mobileSelect = document.getElementById('kecamatan-select-mobile');
-  if (mobileSelect) {
-    kecamatanData.forEach(kec => {
-      const option = document.createElement('option');
-      option.value = kec.nama;
-      option.textContent = kec.nama;
-      mobileSelect.appendChild(option);
-    });
-    mobileSelect.addEventListener('change', (e) => {
-      const selected = e.target.value;
-      const targetBtn = selected ? document.querySelector(`.kec-btn[data-kecamatan="${selected}"]`) : document.getElementById('kec-btn-all');
-      selectKecamatan(selected, targetBtn);
-    });
   }
 
   // --- Budget section kecamatan dropdown ---
@@ -63,11 +47,6 @@ function selectKecamatan(kecamatanName, clickedBtn) {
   activeKecamatan = kecamatanName;
   document.querySelectorAll('.kec-btn').forEach(b => b.classList.remove('kec-btn--active'));
   if (clickedBtn) clickedBtn.classList.add('kec-btn--active');
-
-  const mobileSelect = document.getElementById('kecamatan-select-mobile');
-  if (mobileSelect && mobileSelect.value !== kecamatanName) {
-    mobileSelect.value = kecamatanName;
-  }
 
   filterAndRender();
 }

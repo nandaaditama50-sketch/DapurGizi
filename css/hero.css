@@ -102,26 +102,59 @@
 }
 
 .hero__stat-card {
-  background: rgba(255, 255, 255, 0.08);
-  backdrop-filter: blur(16px);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  position: relative;
+  overflow: hidden;
+  background: #0f5426;
+  border: 1px solid rgba(168, 224, 168, 0.28);
   border-radius: var(--radius-xl);
   padding: var(--space-6);
   text-align: center;
-  transition: var(--transition-base);
+  transition: filter var(--transition-base);
 }
 
 .hero__stat-card:hover {
-  background: rgba(255, 255, 255, 0.14);
-  transform: translateY(-4px);
+  filter: brightness(1.12);
+}
+
+.hero__stat-chart {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0.42;
+  pointer-events: none;
+}
+
+.hero__chart-grid {
+  fill: none;
+  stroke: rgba(255, 255, 255, 0.2);
+  stroke-width: 1;
+}
+
+.hero__chart-line {
+  fill: none;
+  stroke: #a8e0a8;
+  stroke-width: 3;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.hero__chart-area {
+  fill: rgba(168, 224, 168, 0.22);
+}
+
+.hero__chart-bar {
+  fill: rgba(168, 224, 168, 0.38);
 }
 
 .hero__stat-icon {
+  position: relative;
   font-size: 2rem;
   margin-bottom: var(--space-3);
 }
 
 .hero__stat-number {
+  position: relative;
   font-family: var(--font-heading);
   font-size: var(--text-3xl);
   font-weight: 700;
@@ -129,6 +162,7 @@
 }
 
 .hero__stat-label {
+  position: relative;
   font-size: var(--text-sm);
   color: rgba(255, 255, 255, 0.6);
   margin-top: var(--space-1);

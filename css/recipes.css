@@ -87,20 +87,6 @@
   font-size: var(--text-base);
 }
 
-.kecamatan-dropdown-mobile {
-  display: none;
-  margin-top: var(--space-2);
-}
-
-@media (max-width: 768px) {
-  .kecamatan-dropdown-mobile {
-    display: block;
-  }
-  .kecamatan-buttons {
-    display: none !important;
-  }
-}
-
 .kecamatan-buttons {
   display: flex;
   flex-wrap: wrap;

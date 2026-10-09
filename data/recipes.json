@@ -478,5 +478,49 @@
     },
     "bahanLokal": ["ubi jalar"],
     "kecamatan": ["Pejawaran", "Kalibening", "Pandanarum", "Wanayasa"]
+  },
+  {
+    "id": 13,
+    "nama": "Mie Goreng Sayur & Telur",
+    "deskripsi": "Mie goreng dengan sayur hijau dan telur yang gurih, praktis untuk makan siang keluarga dan tetap kaya nutrisi.",
+    "kategoriMakanan": "Makan Siang",
+    "kategoriGizi": ["keluarga", "dewasa", "ibu_menyusui"],
+    "waktuMasak": "20 menit",
+    "porsi": "3 porsi",
+    "estimasiHarga": 11000,
+    "estimasiHargaPerMinggu": 77000,
+    "gambar": "assets/images/recipes/pecel.webp",
+    "bahan": [
+      "250 g mie telur",
+      "2 butir telur",
+      "1 batang wortel, iris tipis",
+      "1 ikat sawi hijau, potong",
+      "2 siung bawang merah, iris",
+      "2 siung bawang putih, cincang",
+      "1 sdm kecap manis",
+      "1 sdt saus tiram",
+      "Garam secukupnya",
+      "Merica secukupnya",
+      "Minyak goreng 2 sdm"
+    ],
+    "caraMasak": [
+      "Rebus mie telur sebentar hingga setengah matang, tiriskan.",
+      "Tumis bawang merah dan bawang putih hingga harum.",
+      "Masukkan telur, orak-arik sebentar.",
+      "Tambahkan wortel dan sawi, aduk hingga layu.",
+      "Masukkan mie, kecap manis, saus tiram, garam, dan merica. Aduk rata hingga matang.",
+      "Sajikan hangat."
+    ],
+    "infoAnakKecil": "Mie goreng ini rasanya lezat dan mengenyangkan! Wortel dan sawi memberi vitamin untuk mata dan tubuh agar tetap kuat. Cocok dimakan saat lapar dan butuh energi untuk bermain.",
+    "kandunganGizi": {
+      "kalori": 320,
+      "protein": 15,
+      "karbohidrat": 38,
+      "lemak": 10,
+      "zatBesi": 2.6,
+      "vitaminA": 480
+    },
+    "bahanLokal": ["mie telur", "wortel", "sawi hijau"],
+    "kecamatan": ["Batur", "Pejawaran", "Pagentan", "Wanayasa", "Kalibening"]
   }
 ]
